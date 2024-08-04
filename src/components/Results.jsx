@@ -23,10 +23,10 @@ const Results = () => {
 
   return (
     <Section id="Results">
-      <div className="container relative z-2">
+      {/* <div className="container relative z-2">
         <Heading className="md:max-w-md lg:max-w-2xl" title="Results" />
         <SearchBar onSearch={handleSearch} />
-      </div>
+      </div> */}
       <FeaturesSectionDemo
         rollNo={searchParams.rollNo}
         batchYear={searchParams.batchYear}

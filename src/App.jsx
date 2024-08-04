@@ -6,6 +6,7 @@ import Button from "./components/Button";
 import Header from "./components/Header";
 import Results from "./components/Results";
 import Hero from "./components/Hero";
+import FeaturesSectionDemo from "./components/design/Features";
 const App = () => {
   return (
     <>
