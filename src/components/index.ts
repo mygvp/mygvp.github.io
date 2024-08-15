@@ -3,4 +3,5 @@ import Navbar from "./navigation/navbar";
 
 export {
     Icons,
+    Navbar,
 }
