@@ -16,6 +16,20 @@ const Navbar = () => {
             <span className="text-lg font-medium">MyGVP</span>
           </Link>
         </div>
+        <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+          <ul className="flex items-center justify-center gap-8">
+            <li className="hover:text-foreground/80 text-sm">
+              <Link href="/about">About</Link>
+            </li>
+            <li className="hover:text-foreground/80 text-sm">
+              <Link href="/services">Services</Link>
+            </li>
+            <li className="hover:text-foreground/80 text-sm">
+              <Link href="/contact">Blogs</Link>
+            </li>
+            
+          </ul>
+        </nav>
       </div>
     </header>
   );

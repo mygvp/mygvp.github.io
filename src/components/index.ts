@@ -1,7 +1,7 @@
-import Icons from "./global/icons";
+// import Icons from "./global/icons";
 import Navbar from "./navigation/navbar";
 
 export {
-    Icons,
+    // Icons,
     Navbar,
 }
