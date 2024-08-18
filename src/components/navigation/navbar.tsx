@@ -10,10 +10,10 @@ const Navbar = () => {
             <Image
               src="/images/android-chrome-192x192.png"
               alt="Vercel Logo"
-              width={32}
-              height={32}
+              width={35}
+              height={35}
             />
-            <span className="text-lg font-medium">MyGvp</span>
+            <span className="text-lg font-medium">MyGVP</span>
           </Link>
         </div>
       </div>
