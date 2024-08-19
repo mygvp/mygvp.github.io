@@ -1,5 +1,4 @@
-import  Container from "@/components/global/container";
-import Wrapper from "@/components/global/wrapper";
+import {Wrapper , Container} from "@/components";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
