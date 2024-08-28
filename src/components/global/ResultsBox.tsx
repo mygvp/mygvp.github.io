@@ -147,7 +147,7 @@ const ResultsBox: React.FC = () => {
             gpas: storedSgpaData,
           });
           console.log("GPA data sent to MongoDB");
-        } catch (error) {
+        } catch (error: any) {
           console.error("Error saving GPA data to MongoDB:", error.message);
         }
       }
