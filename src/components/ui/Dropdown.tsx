@@ -1,10 +1,12 @@
 import { useState } from "react";
 
 interface DropdownProps {
-  options: number[];
-  selectedOption: number;
-  onOptionSelect: (option: number) => void;
+  options: string[];
+  selectedOption: string | null;
+  onOptionSelect: (selectedYear: string) => void; // Define the type for the onOptionSelect handler
+  className: string;
 }
+
 
 const Dropdown: React.FC<DropdownProps> = ({
   options,
@@ -15,12 +17,12 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
-  const handleOptionSelect = (option: number) => {
+  const handleOptionSelect = (option: string) => {
     onOptionSelect(option);
     setIsOpen(false);
   };
 
-  const sortedOptions = options.slice().sort((a, b) => a - b);
+  const sortedOptions = options.slice().sort((a, b) => Number(a) - Number(b));
 
   return (
     <div className="dropdown">

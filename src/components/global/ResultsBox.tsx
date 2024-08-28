@@ -228,7 +228,7 @@ const ResultsBox: React.FC = () => {
         registrationNum = hiddenRegistrationNumber;
       }
       const batchYear =
-        batch || localStorage.getItem(`batchYear_${registrationNum}`);
+        batch || localStorage.getItem(`batchYear_${registrationNum}`)|| '2021';
       const storageKey = `results_${registrationNum}_${batchYear}_${sem}`;
       const sgpaKey = `${registrationNum}_results`;
       const Username = `${registrationNum}_name`;
@@ -242,12 +242,14 @@ const ResultsBox: React.FC = () => {
           showPopup(storedResult);
 
           const sgpa = extractSGPA(storedResult);
-          const name = extractName(storedResult);
           let sgpaData = JSON.parse(localStorage.getItem(sgpaKey) || "{}");
           sgpaData[`${sem}`] = sgpa;
           localStorage.setItem(sgpaKey, JSON.stringify(sgpaData));
           setSgpaInfo(sgpaData);
-          localStorage.setItem(Username, name);
+          const name = extractName(storedResult);
+          if (name) {
+            localStorage.setItem(Username, name);
+          }
           return;
         }
       }
@@ -280,7 +282,9 @@ const ResultsBox: React.FC = () => {
           localStorage.setItem(sgpaKey, JSON.stringify(sgpaData));
           setSgpaInfo(sgpaData);
           localStorage.setItem(storageKey, cleanedData);
-          localStorage.setItem(Username, name);
+          if (name) {
+            localStorage.setItem(Username, name);
+          }
         } else {
           console.error("Failed to retrieve results:", response.status);
         }
@@ -305,7 +309,7 @@ const ResultsBox: React.FC = () => {
         <Dropdown
           options={batchYearOptions}
           selectedOption={batchYear}
-          onSelect={handleBatchYearChange}
+          onOptionSelect={handleBatchYearChange}
           className={styles.dropdown}
         />
         <button onClick={handleClearRegNo} className={styles.clearButton}>
