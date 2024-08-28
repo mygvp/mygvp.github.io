@@ -1,0 +1,206 @@
+/* Import Google Fonts (if applicable, you may use <link> in _document.tsx for global fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Container Styles */
+.container {
+  padding: 25px;
+  max-height: 300px;
+  background-color: #8adaf0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 0 0;
+}
+
+.logoTitle {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.github {
+  margin-left: auto;
+}
+
+/* Header Styles */
+.AppHeader {
+  padding-bottom: 15px;
+  border-bottom: solid 1.5px #dedede;
+}
+
+/* Input Container Styles */
+.regInputContainer {
+  position: relative;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  min-height: 35px;
+}
+
+.regInput {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  padding: 0 10px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding-right: 30px;
+}
+
+.regInput:focus,
+.regInput:hover {
+  outline: solid 3px #ededed;
+}
+
+.clearButton {
+  position: absolute;
+  right: 10px;
+  top: 20%;
+  border: none;
+  background: none;
+  color: rgba(50, 50, 50, 0.5);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.clearButton:focus,
+.clearButton:hover {
+  color: rgba(0, 0, 0, 0.87);
+  transform: scale(1.25);
+  transition: transform 0.2s;
+}
+
+/* Button Grid Styles */
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button:not(.clearButton) {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+button.hovered {
+  font-size: 10px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  position: absolute;
+  background: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+}
+
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.02); 
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdownButton:focus + .dropdownMenu,
+.dropdown:hover .dropdownMenu {
+  display: flex;
+}
+
+.dropdownMenu .dropdownItem {
+  padding: 8px 16px;
+  cursor: pointer;
+  list-style: none;
+  text-align: left;
+}
+
+.dropdownMenu .dropdownItem:hover {
+  background-color: #545454;
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+}
+
+/* Media Query for Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: #fff;
+  }
+
+  .container {
+    background-color: #3e3b46;
+  }
+
+  .regInput {
+    background: #2c2b2b;
+  }
+
+  .regInput:focus,
+  .regInput:hover {
+    outline: solid 3px #303030;
+  }
+
+  .button {
+    background-color: #302a2a;
+  }
+
+  .clearButton {
+    color: rgba(161, 160, 160, 0.5);
+  }
+
+  .clearButton:focus,
+  .clearButton:hover {
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .AppHeader {
+    border-color: #575757;
+  }
+}
