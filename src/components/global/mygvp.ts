@@ -17,7 +17,7 @@ const fetchResultData = async (
     return response.data;
   } catch (error) {
     console.error("Error fetching result data:", error);
-    throw new Error(`Error fetching result data: ${error.message}`);
+    throw new Error(`Error fetching result data: ${(error as Error).message}`);
   }
 };
 
