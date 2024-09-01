@@ -25,9 +25,13 @@ const Navbar = () => {
               <Link href="/services">Products</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
+              <Link href="https://formbuilder.ccavenue.com/live/union-bank-of-india/gvp-college-of-engineering-autonomous" target="_blank" rel="noopener noreferrer">
+                Fee
+              </Link>
+            </li>
+            <li className="hover:text-foreground/80 text-sm">
               <Link href="/contact">Blogs</Link>
             </li>
-            
           </ul>
         </nav>
       </div>
