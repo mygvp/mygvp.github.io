@@ -36,8 +36,8 @@ const HomePage = () => {
                 Your College companion
               </h1>
               <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-                Make College site easy, fast and
-                fun while delivering best-in-class performance.
+                Make College site easy, fast and fun while delivering
+                best-in-class performance.
               </p>
               <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                 <Link
@@ -57,7 +57,7 @@ const HomePage = () => {
                 </Link>
               </div>
             </div>
-            <ResultsBox/>
+            <ResultsBox />
           </div>
         </Container>
       </Wrapper>
