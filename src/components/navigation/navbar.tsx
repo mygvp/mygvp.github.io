@@ -22,7 +22,7 @@ const Navbar = () => {
               <Link href="/about">About</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
-              <Link href="/services">Products</Link>
+              <Link href="/products">Products</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
               <Link href="https://formbuilder.ccavenue.com/live/union-bank-of-india/gvp-college-of-engineering-autonomous" target="_blank" rel="noopener noreferrer">
@@ -30,7 +30,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
-              <Link href="/contact">Blogs</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
